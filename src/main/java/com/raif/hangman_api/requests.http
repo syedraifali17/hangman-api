@@ -1,0 +1,49 @@
+### ===== AUTH =====
+
+### Register a new user
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{"username": "raif", "password": "secret123"}
+
+### Login
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{"username": "raif", "password": "secret123"}
+
+### ===== GAME =====
+
+### Start a new game
+POST http://localhost:8080/api/game/start
+Content-Type: application/json
+
+{"userId": 1}
+
+### Get current game status
+GET http://localhost:8080/api/game/status?userId=1
+
+### Guess a letter
+POST http://localhost:8080/api/game/guess
+Content-Type: application/json
+
+{"userId": 1, "letter": "e"}
+
+### ===== WORDS =====
+
+### Get a random word (admin/debug use)
+GET http://localhost:8080/api/words/random
+
+### Get words by category
+GET http://localhost:8080/api/words/category/Animals
+
+### Get total word count
+GET http://localhost:8080/api/words/count
+
+### ===== STATS =====
+
+### Get my stats
+GET http://localhost:8080/api/stats/me?userId=1
+
+### Get leaderboard
+GET http://localhost:8080/api/stats/leaderboard

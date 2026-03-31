@@ -1,0 +1,14 @@
+# Environment
+application.properties
+*.env
+
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+target/
+
+# OS
+.DS_Store
+Thumbs.db
