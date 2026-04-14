@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: hangman-api
+    env: docker
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
